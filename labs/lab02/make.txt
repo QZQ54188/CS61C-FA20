@@ -1,0 +1,20 @@
+1.clean 目标是删除所有已编译程序的规则的一部分。这个目标的规则中包含了删除生成的中间文件
+（如.o文件）、可执行文件（由$(BINARIES)定义的程序），以及其他临时文件的命令。
+clean:
+	-rm -rf core *.o *~ "#"*"#" Makefile.bak $(BINARIES) *.dSYM
+2.all 目标是生成所有已编译程序的规则的一部分。在Makefile中，
+all 目标依赖于所有的可执行文件，即$(BINARIES)，
+这包含了bit_ops、lfsr 和 vector-test 这几个程序。
+因此，执行make all时，会调用编译和链接规则来生成这些可执行文件。
+all: $(BINARIES)
+3.
+CC=gcc: 指定C编译器为gcc。
+4.
+CFLAGS=-ggdb -Wall -std=c99: 定义编译选项，
+包括生成调试信息（-ggdb）、开启所有警告（-Wall），以及使用C99标准（-std=c99）。
+5.
+$(FOO)
+6.
+macOS
+7.
+第31行
