@@ -1,0 +1,15 @@
+    ijk: 1.337 Gflop/s
+	ikj: 0.167 Gflop/s
+	jik: 1.021 Gflop/s
+	jki: 5.423 Gflop/s
+	kij: 0.173 Gflop/s
+	kji: 2.826 Gflop/s
+1.jki的速度是最快的
+2.ikj的速度是最慢的
+内层循环的步长越大，那么速度越慢
+
+--- lines below are ignored by the AG ---
+
+Checkoff Question 1:
+Checkoff Question 2:
+Checkoff Question 3:

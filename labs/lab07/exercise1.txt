@@ -1,0 +1,29 @@
+Scenario 1
+    1.在这个程序中，步长和cacheBlock的大小均为8，这就会导致根据主存地址寻找对应的
+    cacheBlock的index永远是index为1的cacheBlock，不会访问其他的cacheBlock，
+    所以以这样的参数运行的程序，它的cache命中率为0
+    2.只要你不改变步长的大小，无论你怎么改变重复次数，你的cache命中率永远会是0
+    3.适当的降低步长可以提高cache命中率，当步长为1时cache命中率为50%
+
+Scenario 2
+    1.有两次访问内存，因为你选择了option=1，每次迭代的操作是，从数组中读取一个值，
+    然后再将修改之后的值写回内存
+    2.Miss,Hit,Hit,Hit
+    3.cache命中率接近于100%，因为所有要访问的数据都已经被缓存了，所以在第一次迭代
+    之后，所有的访问都会命中。
+
+Scenario 3
+    1.L1 HR：50%，L2 HR：0%，Overall HR：50%
+    2.对于L1，我们进行了32次访问，其中有16词访问失败
+    3.对于L2，我们进行了16次访问，它们是L1未命中的缓存
+    4.提高L2的cacheBlock的大小可以提高命中率。
+    5.(1)当我们增加L1中的块数时，对L1_HR和L2_HR没有影响。 
+    (2)当我们增加L1缓存的块大小时，L1_HR会增加，但L2_HR不会受到影响。
+
+--- lines below are ignored by the AG ---
+
+Checkoff Question 1:
+Checkoff Question 2:
+Checkoff Question 3:
+Checkoff Question 4:
+Checkoff Question 5:
