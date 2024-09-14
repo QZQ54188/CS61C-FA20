@@ -1,0 +1,14 @@
+Exercise 1:
+    1. 8
+    2. No.The TLB covers all physical number in physical memory.
+    3.3, 7, 0, 7
+
+Exercise 2:
+    1. 00, 20, 40, 60, 80, A0, C0, E0, 00, 20
+
+Exercise 3:
+    1.Increase Physical Memory Size, decrease Page Size.
+Exercise 4
+    1.P1, P2, P3, P4 are four different processes. 
+    When it comes to another process, it will clear the TLB, 
+    and causes higher TLB Miss Rate.
